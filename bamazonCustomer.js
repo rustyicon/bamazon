@@ -58,7 +58,8 @@ var query = "SELECT * FROM products"
                 }
                 return false;
             }
-        }, {
+        }, 
+        {
             name: "purchase",
             message: "Deposit the exact amount to complete you purchase",
             validate: function(value) {
@@ -66,7 +67,7 @@ var query = "SELECT * FROM products"
                     return true;
                 }
                 return false;
-            }
+                }
         }
 
     ]).then(function(checkout){
@@ -162,14 +163,5 @@ function completePurchase() {
 
 */
 
-/* select by productID
-var productID = function(){
+//module.exports = bamazonCustomer;
 
-    var query = "SELECT item_id FROM products WHERE ?;"
-    connection.query(query, "id", function (err,res){
-        for (var i = 0; i < res.length; i++) {
-            console.log(res[i]);
-        }
-    });
-}
-*/
